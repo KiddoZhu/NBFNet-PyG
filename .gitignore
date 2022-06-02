@@ -1,0 +1,15 @@
+# PyCharm
+/.idea
+
+# VS Code
+/.vscode
+
+# Sphinx
+/doc/build
+
+# Python
+__pycache__
+*.pyc
+
+# macOS
+.DS_Store
