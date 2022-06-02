@@ -35,7 +35,7 @@ conda install ninja easydict pyyaml -c conda-forge
 
 ```bash
 pip install torch==1.8.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html
-pip install torch-scatter torch-sparse torch-geometric -f https://data.pyg.org/whl/torch-1.8.0+cu111.html
+pip install torch-scatter==2.0.8 torch-sparse==0.6.12 torch-geometric -f https://data.pyg.org/whl/torch-1.8.0+cu111.html
 pip install ninja easydict pyyaml
 ```
 
