@@ -39,6 +39,24 @@ pip install torch-scatter==2.0.8 torch-sparse==0.6.12 torch-geometric -f https:/
 pip install ninja easydict pyyaml
 ```
 
+#### Tips for MacOS ####
+
+This code needs to be able to using OpenMP which is not supported by the native Apple Clang implementations. In order to be able to use this code with MacOS (x86), you may need to install the following packages using brew:
+
+```bash
+brew install llvm libomp
+```
+
+Once these have been installed we need to point to the new OpenMP enabled version of Clang by setting a range of environment variables:
+
+```bash
+export LDFLAGS="-L/usr/local/opt/llvm/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
+export CXX=/usr/local/opt/llvm/bin/clang++
+```
+
+You should now be able to run this code on MacOS.
+
 ## Reproduction ##
 
 To reproduce the results of NBFNet, use the following command. Alternatively, you
